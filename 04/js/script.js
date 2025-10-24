@@ -44,12 +44,11 @@ const divideBtn = document.getElementById("divideNumbersBtn");
 divideBtn.addEventListener("click", () => {
   const number7 = Number(getNumber7Field.value);
   const number8 = Number(getNumber8Field.value);
-
-  // for at vise at man ikke kan divideree med 0
+  // for at vise at man ikke kan divideree med 0. tre lighedstegn checker både typen og value. "return" forlader funktionen med det samme.
   if (number8 === 0) {
-    resultDivideField.value = "Cannot divide by 0";}
-    return;
-
+    resultDivideField.value = "Cannot divide by 0";
+    return;}
   const result = number7 / number8;
   resultDivideField.value = result;
 });
+
