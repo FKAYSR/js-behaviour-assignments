@@ -1,35 +1,55 @@
 "use strict";
 
-const getNumber1Field = document.getElementById("number1")
-const getNumber2Field = document.getElementById("number2")
+const getNumber1Field = document.getElementById("number1");
+const getNumber2Field = document.getElementById("number2");
 const resultAdditionField = document.getElementById("resultAddition");
 const additionBtn = document.getElementById("addNumbersBtn");
 
 additionBtn.addEventListener("click", () => {
-  
-    const number1 = Number(getNumber1Field.value);
-    const number2 = Number(getNumber2Field.value);
-    const result = number1 + number2
-    resultAdditionField.value = result;
-
+  const number1 = Number(getNumber1Field.value);
+  const number2 = Number(getNumber2Field.value);
+  const result = number1 + number2;
+  resultAdditionField.value = result;
 });
 
-
-const getNumber3Field = document.getElementById("number3")
-const getNumber4Field = document.getElementById("number4")
+const getNumber3Field = document.getElementById("number3");
+const getNumber4Field = document.getElementById("number4");
 const resultSubstractionField = document.getElementById("resultSubstraction");
 const substractBtn = document.getElementById("substractNumbersBtn");
 
 substractBtn.addEventListener("click", () => {
-  
-    const number3 = Number(getNumber3Field.value);
-    const number4 = Number(getNumber4Field.value);
-    const result = number3 - number4
-    resultSubstractionField.value = result;
-
+  const number3 = Number(getNumber3Field.value);
+  const number4 = Number(getNumber4Field.value);
+  const result = number3 - number4;
+  resultSubstractionField.value = result;
 });
 
+const getNumber5Field = document.getElementById("number5");
+const getNumber6Field = document.getElementById("number6");
+const resultMultiplyField = document.getElementById("resultMultiply");
+const multiplyBtn = document.getElementById("multiplyNumbersBtn");
 
+multiplyBtn.addEventListener("click", () => {
+  const number5 = Number(getNumber5Field.value);
+  const number6 = Number(getNumber6Field.value);
+  const result = number5 * number6;
+  resultMultiplyField.value = result;
+});
 
+const getNumber7Field = document.getElementById("number7");
+const getNumber8Field = document.getElementById("number8");
+const resultDivideField = document.getElementById("resultDivide");
+const divideBtn = document.getElementById("divideNumbersBtn");
 
+divideBtn.addEventListener("click", () => {
+  const number7 = Number(getNumber7Field.value);
+  const number8 = Number(getNumber8Field.value);
 
+  // for at vise at man ikke kan divideree med 0
+  if (number8 === 0) {
+    resultDivideField.value = "Cannot divide by 0";}
+    return;
+
+  const result = number7 / number8;
+  resultDivideField.value = result;
+});
