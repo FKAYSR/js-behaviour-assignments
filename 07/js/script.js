@@ -25,10 +25,9 @@ const getWordElem = document.getElementById("word");
 
 getWordElem.addEventListener("click", function() {
 
-    if (this.textContent == "Det ta'r kun 5 minutter"){
-        this.innerHTML = "<strong>og så er du i Netto.</strong>";
+    if (this.textContent == "Det rigtige sted at spare💸") {
+      this.innerHTML = "<strong>365Discount</strong>";
+    } else {
+      this.innerHTML = "Det rigtige sted at spare💸";
     }
-    else {
-        this.innerHTML = "Det ta'r kun 5 minutter";
-     }
 });
